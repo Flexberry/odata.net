@@ -3,7 +3,7 @@
   <PropertyGroup>
     <AssemblyName>Microsoft.OData.Core</AssemblyName>
     <OutputType>Library</OutputType>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <!-- Rely on VS to generate TargetFrameworkAttribute for Desktop -->
     <GenerateTargetFrameworkAttribute>true</GenerateTargetFrameworkAttribute>
     <TransparentAssembly>true</TransparentAssembly>
@@ -14,6 +14,16 @@
     <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
     <DefineConstants>$(DefineConstants);ODATALIB;ODATALIB_ASYNC;DNX451</DefineConstants>
     <EnableLocalization>true</EnableLocalization>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>false</DelaySign>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>debug-key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DocumentationFile>Microsoft.OData.Core.xml</DocumentationFile>
   </PropertyGroup>
   <Import Project="..\Build.props" />
   <!-- References -->
@@ -650,6 +660,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="debug-key.snk" />
     <None Include="Microsoft.OData.Core.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Microsoft.OData.Core.cs</LastGenOutput>

@@ -3,7 +3,7 @@
   <PropertyGroup>
     <AssemblyName>Microsoft.Spatial</AssemblyName>
     <OutputType>Library</OutputType>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <!-- Rely on VS to generate TargetFrameworkAttribute for Desktop -->
     <GenerateTargetFrameworkAttribute>true</GenerateTargetFrameworkAttribute>
     <TransparentAssembly>true</TransparentAssembly>
@@ -14,6 +14,16 @@
     <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
     <DefineConstants>$(DefineConstants);SPATIAL</DefineConstants>
     <EnableLocalization>true</EnableLocalization>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>false</DelaySign>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>debug-key.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <!-- References -->
   <Import Project="..\Build.props" />
@@ -151,6 +161,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="debug-key.snk" />
     <None Include="Microsoft.Spatial.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Microsoft.Spatial.cs</LastGenOutput>

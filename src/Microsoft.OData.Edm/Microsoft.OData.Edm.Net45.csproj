@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <!-- Rely on VS to generate TargetFrameworkAttribute for Desktop -->
     <GenerateTargetFrameworkAttribute>true</GenerateTargetFrameworkAttribute>
     <AssemblyName>Microsoft.OData.Edm</AssemblyName>
@@ -17,6 +17,16 @@
     <EnableLocalization>true</EnableLocalization>
     <StyleCopOverrideSettingsFile Condition="'$(StyleCopOverrideSettingsFile)' == ''">$(MSBuildThisFileDirectory)Microsoft.OData.Edm.StyleCop</StyleCopOverrideSettingsFile>
     <CodeAnalysisUseAdditionalODataRules Condition="'$(CodeAnalysisUseAdditionalODataRules)' == ''">false</CodeAnalysisUseAdditionalODataRules>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>false</DelaySign>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>debug-key.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <Import Project="..\Build.props" />
   <!-- Generated files -->
@@ -552,6 +562,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="debug-key.snk" />
     <None Include="Microsoft.OData.Edm.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Microsoft.OData.Edm.cs</LastGenOutput>
