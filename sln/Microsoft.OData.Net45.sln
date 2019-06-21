@@ -1,12 +1,19 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29009.5
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.OData.Edm.Net45", "..\src\Microsoft.OData.Edm\Microsoft.OData.Edm.Net45.csproj", "{42968D87-D040-422D-8F29-7386DEA29719}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Spatial.Net45", "..\src\Microsoft.Spatial\Microsoft.Spatial.Net45.csproj", "{32BE13F3-9BC8-46F3-89B6-6DCDBE50D247}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.OData.Core.Net45", "..\src\Microsoft.OData.Core\Microsoft.OData.Core.Net45.csproj", "{26E0562A-B1FA-4FE1-8862-CF195B23ABCB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nuspec", "nuspec", "{33064D0B-AECA-4030-95D7-D4AB5CD92625}"
+	ProjectSection(SolutionItems) = preProject
+		..\Microsoft.OData.Core.nuspec = ..\Microsoft.OData.Core.nuspec
+		..\Microsoft.OData.Edm.nuspec = ..\Microsoft.OData.Edm.nuspec
+		..\Microsoft.Spatial.nuspec = ..\Microsoft.Spatial.nuspec
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -78,5 +85,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0F529E1C-8369-470B-8FF9-091CD61D2BFE}
 	EndGlobalSection
 EndGlobal
