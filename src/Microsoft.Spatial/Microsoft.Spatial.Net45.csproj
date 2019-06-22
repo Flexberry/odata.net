@@ -153,14 +153,6 @@
     <Compile Include="XmlConstants.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="InternalsVisibleTo.cs">
-      <IncludeInOpenSource>false</IncludeInOpenSource>
-    </Compile>
-    <Compile Include="$(AssemblyKeysCSharpFilePath)">
-      <IncludeInOpenSource>false</IncludeInOpenSource>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="debug-key.snk" />
     <None Include="Microsoft.Spatial.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

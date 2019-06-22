@@ -25,14 +25,17 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <DocumentationFile>Microsoft.OData.Core.xml</DocumentationFile>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
   <Import Project="..\Build.props" />
   <!-- References -->
   <ItemGroup>
-    <ProjectReference Include="$(EnlistmentRoot)\src\Microsoft.OData.Edm\Microsoft.OData.Edm.Net45.csproj">
+    <ProjectReference Include="D:\Git\Source\Repos\forks\odata.net\src\Microsoft.OData.Edm\Microsoft.OData.Edm.Net45.csproj">
       <Project>{42968D87-D040-422D-8F29-7386DEA29719}</Project>
       <Name>Microsoft.OData.Edm</Name>
     </ProjectReference>
-    <ProjectReference Include="$(EnlistmentRoot)\src\Microsoft.Spatial\Microsoft.Spatial.Net45.csproj">
+    <ProjectReference Include="D:\Git\Source\Repos\forks\odata.net\src\Microsoft.Spatial\Microsoft.Spatial.Net45.csproj">
       <Project>{32BE13F3-9BC8-46F3-89B6-6DCDBE50D247}</Project>
       <Name>Microsoft.Spatial</Name>
     </ProjectReference>
@@ -650,14 +653,6 @@
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="WriterValidatorFullValidation.cs" />
     <Compile Include="WriterValidatorMinimalValidation.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="ShippingAssemblyAttributes.cs">
-      <IncludeInOpenSource>false</IncludeInOpenSource>
-    </Compile>
-    <Compile Include="$(AssemblyKeysCSharpFilePath)">
-      <IncludeInOpenSource>false</IncludeInOpenSource>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="debug-key.snk" />

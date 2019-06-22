@@ -540,14 +540,6 @@
     <Compile Include="..\PlatformHelper.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ShippingAssemblyAttributes.cs">
-      <IncludeInOpenSource>false</IncludeInOpenSource>
-    </Compile>
-    <Compile Include="$(AssemblyKeysCSharpFilePath)">
-      <IncludeInOpenSource>false</IncludeInOpenSource>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Vocabularies\CapabilitiesVocabularies.xml">
       <LogicalName>CapabilitiesVocabularies.xml</LogicalName>
       <SubType>Designer</SubType>

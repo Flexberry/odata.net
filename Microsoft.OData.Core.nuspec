@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>Microsoft.OData.Core-Debug</id>
-        <version>6.15.0</version>
+        <version>6.15.1</version>
         <title>ODataLib</title>
         <authors>Microsoft Corporation</authors>
         <owners>Microsoft Corporation</owners>
@@ -16,8 +16,8 @@ OData .NET library is open source at http://github.com/OData/odata.net</descript
         <releaseNotes>http://odata.github.io/odata.net/#ODL-6.15.0</releaseNotes>
         <tags>wcf data services odata odatalib edmlib spatial ado.net ef entity framework open protocol wcfds wcfdataservices dataservices</tags>
         <dependencies>
-            <dependency id="Microsoft.Spatial-Debug" version="[6.15.0]" />
-            <dependency id="Microsoft.OData.Edm-Debug" version="[6.15.0]" />
+            <dependency id="Microsoft.Spatial-Debug" version="[6.15.1]" />
+            <dependency id="Microsoft.OData.Edm-Debug" version="[6.15.1]" />
         </dependencies>
     </metadata>
   <files>

@@ -58,8 +58,6 @@
     <IntermediateOutputPath Condition=" '$(IntermediateOutputPath)' =='' ">$(BaseIntermediateOutputPath)\$(Platform)\$(Configuration)\$(MSBuildProjectFile)\</IntermediateOutputPath>
   </PropertyGroup>
 
-  <Import Project="$(BuildExtensionsPath)\Codesign.props" />
-
   <PropertyGroup>
     <!-- Before/After injection Settings -->
     <CustomBeforeMicrosoftCommonTargets>$(MSBuildThisFileDirectory)Before.Common.targets</CustomBeforeMicrosoftCommonTargets>
