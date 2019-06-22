@@ -30,16 +30,6 @@
   </PropertyGroup>
   <Import Project="..\Build.props" />
   <!-- References -->
-  <ItemGroup>
-    <ProjectReference Include="D:\Git\Source\Repos\forks\odata.net\src\Microsoft.OData.Edm\Microsoft.OData.Edm.Net45.csproj">
-      <Project>{42968D87-D040-422D-8F29-7386DEA29719}</Project>
-      <Name>Microsoft.OData.Edm</Name>
-    </ProjectReference>
-    <ProjectReference Include="D:\Git\Source\Repos\forks\odata.net\src\Microsoft.Spatial\Microsoft.Spatial.Net45.csproj">
-      <Project>{32BE13F3-9BC8-46F3-89B6-6DCDBE50D247}</Project>
-      <Name>Microsoft.Spatial</Name>
-    </ProjectReference>
-  </ItemGroup>
   <!-- Generated files -->
   <ItemGroup>
     <TextStringResource Include="Microsoft.OData.Core.txt">
@@ -694,6 +684,16 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Microsoft.OData.Edm\Microsoft.OData.Edm.Net45.csproj">
+      <Project>{42968d87-d040-422d-8f29-7386dea29719}</Project>
+      <Name>Microsoft.OData.Edm.Net45</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Spatial\Microsoft.Spatial.Net45.csproj">
+      <Project>{32be13f3-9bc8-46f3-89b6-6dcdbe50d247}</Project>
+      <Name>Microsoft.Spatial.Net45</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
