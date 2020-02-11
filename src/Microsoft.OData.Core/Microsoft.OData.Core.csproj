@@ -23,6 +23,10 @@
   <PropertyGroup>
     <DelaySign>false</DelaySign>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <CodeAnalysisRuleSet>..\..\tools\CustomMSBuild\ODataRuleSets.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
   <Import Project="..\Build.props" />
   <!-- References -->
   <ItemGroup>
