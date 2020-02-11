@@ -15,6 +15,12 @@
     <EnableLocalization>true</EnableLocalization>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <!-- References -->
   <Import Project="..\Build.props" />
   <ItemGroup>
@@ -444,14 +450,6 @@
       <Link>PlatformHelper.cs</Link>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="ShippingAssemblyAttributes.cs">
-      <IncludeInOpenSource>false</IncludeInOpenSource>
-    </Compile>
-    <Compile Include="$(AssemblyKeysCSharpFilePath)">
-      <IncludeInOpenSource>false</IncludeInOpenSource>
-    </Compile>
-  </ItemGroup>
   <!-- Class Diagrams -->
   <ItemGroup>
     <None Include="Diagrams\ALinq.cd" />
@@ -470,6 +468,7 @@
     <GenerateTextStringResourcesDependsOn>BuildTextFile;$(GenerateTextStringResourcesDependsOn)</GenerateTextStringResourcesDependsOn>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="key.snk" />
     <None Include="Microsoft.OData.Client.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Microsoft.OData.Client.cs</LastGenOutput>

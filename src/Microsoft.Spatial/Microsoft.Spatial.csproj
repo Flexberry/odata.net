@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <AssemblyName>Microsoft.Spatial</AssemblyName>
@@ -16,6 +16,12 @@
     <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
     <DefineConstants>$(DefineConstants);SPATIAL;PORTABLELIB;SUPPRESS_PORTABLELIB_TARGETFRAMEWORK_ATTRIBUTE</DefineConstants>
     <EnableLocalization>true</EnableLocalization>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <!-- References -->
   <Import Project="..\Build.props" />
@@ -140,14 +146,7 @@
     <Compile Include="XmlConstants.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="InternalsVisibleTo.cs">
-      <IncludeInOpenSource>false</IncludeInOpenSource>
-    </Compile>
-    <Compile Include="$(AssemblyKeysCSharpFilePath)">
-      <IncludeInOpenSource>false</IncludeInOpenSource>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
+    <None Include="key.snk" />
     <None Include="Microsoft.Spatial.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Microsoft.Spatial.cs</LastGenOutput>

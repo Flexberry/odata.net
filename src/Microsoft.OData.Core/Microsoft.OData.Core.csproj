@@ -17,6 +17,12 @@
     <DefineConstants>$(DefineConstants);ODATA_CORE;PORTABLELIB;SUPPRESS_PORTABLELIB_TARGETFRAMEWORK_ATTRIBUTE</DefineConstants>
     <EnableLocalization>true</EnableLocalization>
   </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>false</DelaySign>
+  </PropertyGroup>
   <Import Project="..\Build.props" />
   <!-- References -->
   <ItemGroup>
@@ -624,6 +630,7 @@
       <Link>PlatformHelper.cs</Link>
     </Compile>
     <Compile Include="WriterValidator.cs" />
+    <None Include="key.snk" />
     <None Include="obj2c\i386\AssemblyAttributes.cs">
       <Visible>false</Visible>
     </None>
@@ -631,14 +638,6 @@
       <Visible>false</Visible>
     </None>
     <Compile Include="GlobalSuppressions.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="ShippingAssemblyAttributes.cs">
-      <IncludeInOpenSource>false</IncludeInOpenSource>
-    </Compile>
-    <Compile Include="$(AssemblyKeysCSharpFilePath)">
-      <IncludeInOpenSource>false</IncludeInOpenSource>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Microsoft.OData.Core.tt">
