@@ -20,6 +20,12 @@
     <DefineConstants>$(DefineConstants);SPATIAL;PORTABLELIB;SUPPRESS_PORTABLELIB_TARGETFRAMEWORK_ATTRIBUTE</DefineConstants>
     <EnableLocalization>true</EnableLocalization>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <!-- References -->
   <Import Project="..\..\Build.props" />
   <!-- Generated files -->
@@ -143,9 +149,6 @@
     <Compile Include="..\XmlConstants.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\InternalsVisibleTo.cs">
-      <IncludeInOpenSource>false</IncludeInOpenSource>
-    </Compile>
     <Compile Include="$(AssemblyKeysCSharpFilePath)">
       <IncludeInOpenSource>false</IncludeInOpenSource>
     </Compile>
@@ -171,6 +174,7 @@
       <DependentUpon>Parameterized.Microsoft.Spatial.tt</DependentUpon>
       <ExcludeFromStyleCop>true</ExcludeFromStyleCop>
     </Compile>
+    <None Include="key.snk" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>

@@ -28,6 +28,12 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Cover|AnyCPU'">
     <OutputPath>..\..\..\bin\AnyCPU\Cover\Product\.NETPortable\v5.0\Microsoft.OData.Client.NetStandard\</OutputPath>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <Import Project="..\..\Build.props" />
   <!-- References -->
   <ItemGroup>
@@ -844,7 +850,7 @@
     <Compile Include="$(EnlistmentRoot)\src\Microsoft.OData.Core\TaskUtils.cs">
       <Link>Client\TaskUtils.cs</Link>
     </Compile>
-    <Compile Include="$(EnlistmentRoot)\src\Microsoft.OData.Client\ShippingAssemblyAttributes.cs">
+    <Compile Include="D:\Git\Source\Repos\forks\odata.net\src\Microsoft.OData.Client\ShippingAssemblyAttributes.cs">
       <IncludeInOpenSource>false</IncludeInOpenSource>
     </Compile>
     <Compile Include="$(AssemblyKeysCSharpFilePath)">
@@ -866,17 +872,17 @@
     <Compile Include="$(EnlistmentRoot)\src\Microsoft.OData.Core\UriParser\Aggregation\ApplyTransformationToken.cs">
       <Link>ALinq\UriParser\Aggregation\ApplyTransformationToken.cs</Link>
     </Compile>
-    <Compile Include="$(EnlistmentRoot)\src\Microsoft.OData.Core\UriParser\Aggregation\EntitySetAggregateExpression.cs"> 
-      <Link>ALinq\UriParser\Aggregation\EntitySetAggregateExpression.cs</Link> 
+    <Compile Include="$(EnlistmentRoot)\src\Microsoft.OData.Core\UriParser\Aggregation\EntitySetAggregateExpression.cs">
+      <Link>ALinq\UriParser\Aggregation\EntitySetAggregateExpression.cs</Link>
     </Compile>
-    <Compile Include="$(EnlistmentRoot)\src\Microsoft.OData.Core\UriParser\Aggregation\EntitySetAggregateToken.cs"> 
-      <Link>ALinq\UriParser\Aggregation\EntitySetAggregateToken.cs</Link> 
+    <Compile Include="$(EnlistmentRoot)\src\Microsoft.OData.Core\UriParser\Aggregation\EntitySetAggregateToken.cs">
+      <Link>ALinq\UriParser\Aggregation\EntitySetAggregateToken.cs</Link>
     </Compile>
-    <Compile Include="$(EnlistmentRoot)\src\Microsoft.OData.Core\UriParser\Aggregation\AggregateTokenBase.cs"> 
-      <Link>ALinq\UriParser\Aggregation\AggregateTokenBase.cs</Link> 
+    <Compile Include="$(EnlistmentRoot)\src\Microsoft.OData.Core\UriParser\Aggregation\AggregateTokenBase.cs">
+      <Link>ALinq\UriParser\Aggregation\AggregateTokenBase.cs</Link>
     </Compile>
-    <Compile Include="$(EnlistmentRoot)\src\Microsoft.OData.Core\UriParser\Aggregation\AggregateExpressionToken.cs"> 
-      <Link>ALinq\UriParser\Aggregation\AggregateExpressionToken.cs</Link> 
+    <Compile Include="$(EnlistmentRoot)\src\Microsoft.OData.Core\UriParser\Aggregation\AggregateExpressionToken.cs">
+      <Link>ALinq\UriParser\Aggregation\AggregateExpressionToken.cs</Link>
     </Compile>
     <Compile Include="$(EnlistmentRoot)\src\Microsoft.OData.Client\Annotation\InstanceAnnotationDictWeakKeyComparer.cs">
       <Link>Annotation\InstanceAnnotationDictWeakKeyComparer.cs</Link>
@@ -918,6 +924,7 @@
       <DependentUpon>Parameterized.Microsoft.OData.Client.Portable.tt</DependentUpon>
       <ExcludeFromStyleCop>true</ExcludeFromStyleCop>
     </Compile>
+    <None Include="key.snk" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>

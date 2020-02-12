@@ -29,6 +29,12 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Cover|AnyCPU'">
     <OutputPath>..\..\..\bin\AnyCPU\Cover\Product\.NETPortable\v5.0\Microsoft.OData.Core\</OutputPath>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <Import Project="..\Build.props" />
   <!-- References -->
   <ItemGroup>
@@ -1789,12 +1795,10 @@
       <Visible>false</Visible>
     </None>
     <Compile Include="..\GlobalSuppressions.cs" />
+    <None Include="key.snk" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\ShippingAssemblyAttributes.cs">
-      <IncludeInOpenSource>false</IncludeInOpenSource>
-    </Compile>
     <Compile Include="$(AssemblyKeysCSharpFilePath)">
       <IncludeInOpenSource>false</IncludeInOpenSource>
     </Compile>

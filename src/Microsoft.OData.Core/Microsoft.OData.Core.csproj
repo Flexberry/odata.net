@@ -27,6 +27,9 @@
     <CodeAnalysisRuleSet>..\..\tools\CustomMSBuild\ODataRuleSets.ruleset</CodeAnalysisRuleSet>
     <RunCodeAnalysis>false</RunCodeAnalysis>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
   <Import Project="..\Build.props" />
   <!-- References -->
   <ItemGroup>

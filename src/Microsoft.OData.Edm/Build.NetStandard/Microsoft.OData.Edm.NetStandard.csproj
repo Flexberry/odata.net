@@ -34,6 +34,12 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Cover|AnyCPU'">
     <OutputPath>..\..\..\bin\AnyCPU\Cover\Product\.NETPortable\v5.0\Microsoft.OData.Edm\</OutputPath>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <Import Project="..\..\Build.props" />
   <!-- Generated files -->
   <ItemGroup>
@@ -1470,9 +1476,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\ShippingAssemblyAttributes.cs">
-      <IncludeInOpenSource>false</IncludeInOpenSource>
-    </Compile>
     <Compile Include="$(AssemblyKeysCSharpFilePath)">
       <IncludeInOpenSource>false</IncludeInOpenSource>
     </Compile>
@@ -1498,6 +1501,7 @@
       <DependentUpon>Parameterized.Microsoft.OData.Edm.tt</DependentUpon>
       <ExcludeFromStyleCop>true</ExcludeFromStyleCop>
     </Compile>
+    <None Include="key.snk" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
