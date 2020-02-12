@@ -37,10 +37,6 @@
       <Project>{7D921888-FE03-4C3F-80FE-2F624505461C}</Project>
       <Name>Microsoft.OData.Edm</Name>
     </ProjectReference>
-    <ProjectReference Include="$(EnlistmentRoot)\src\Microsoft.Spatial\Microsoft.Spatial.csproj">
-      <Project>{5D921888-FE03-4C3F-40FE-2F624505461D}</Project>
-      <Name>Microsoft.Spatial</Name>
-    </ProjectReference>
   </ItemGroup>
   <!-- Generated files -->
   <ItemGroup>
@@ -657,6 +653,7 @@
       <DependentUpon>Microsoft.OData.Core.tt</DependentUpon>
       <ExcludeFromStyleCop>true</ExcludeFromStyleCop>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Parameterized.Microsoft.OData.Core.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Parameterized.Microsoft.OData.Core.cs</LastGenOutput>
@@ -685,6 +682,11 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Spatial, Version=7.5.0.20627, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\sln\packages\Microsoft.Spatial.7.5.0\lib\portable-net45+win8+wpa81\Microsoft.Spatial.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Import Project="$(BuildExtensionsPath)\Portable.targets" />
 </Project>

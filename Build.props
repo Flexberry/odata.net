@@ -10,10 +10,10 @@
 
     <SilverlightClientLibraries>$(MSBuildProgramFiles32)\Microsoft SDKs\Silverlight\$(TargetFrameworkVersion)\Libraries\Client</SilverlightClientLibraries>
 
-    <!-- We only do test signing in OSS -->
+    <!-- We only do test signing in OSS 
     <SigningScenario Condition="'$(SigningScenario)' == '' and '$(Configuration)' == 'Release'">$(SigningScenarioForRelease)</SigningScenario>
     <SigningScenario Condition="'$(SigningScenario)' == ''">Test</SigningScenario>
-    <SigningType Condition="'$(SigningType)' == ''">Test</SigningType>
+    <SigningType Condition="'$(SigningType)' == ''">Test</SigningType>-->
   </PropertyGroup>
 
   <PropertyGroup>
